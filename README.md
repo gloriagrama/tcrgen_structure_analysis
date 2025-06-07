@@ -11,7 +11,7 @@ Write all solved structure information to a compiled metadata file containing th
 ### Determine fidelity of TCRDock predictions
 
 Before aligning generated CDR3β sequences to experimental counterparts, ensure that the predicted structures do not deviate significantly from the solved structures.  
-Use RMSD (Root Mean Square Deviation) as the structural similarity metric, and filter out predictions with an RMSD greater than 2 Å to retain only high-confidence models. (see rmsd.ipynb)
+Use RMSD as the structural similarity metric, and filter out predictions with an RMSD greater than 2 Å to retain only high-confidence models. (see rmsd.ipynb)
 
 ## Alphafold env
 Run alphafold_env.yaml (based on Alphafold and TCRDock requirements), tensorflow-cpu had a tendency to silently upgrade and cause dependancy conflicts so ensure that you are running 2.12.0.   
@@ -22,3 +22,7 @@ Pengfei should have access to my /scratch/ggrama/download directory with the cor
 
 ## Rosetta Applications
 Rosetta Relax and Interface Analyzer can be downloaded [here](https://rosettacommons.org/software/download/) as a non-commerical user (version 3.14).  
+
+## Generated sequences
+After determining replicable IDs, follow workflow in rmsd.ipynb  
+Additional analysis pipelines can be found in interface_analysis.ipynb
