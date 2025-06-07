@@ -8,7 +8,7 @@ Write all solved structure information to a compiled metadata file containing th
 
 `{'Peptide', 'TRAV', 'TRAJ', 'CDR3α', 'TRBV', 'TRBJ', 'CDR3β', 'PDB ID'}`
 
-### Determine Accuracy of TCRDock Predictions
+### Determine fidelity of TCRDock predictions
 
 Before aligning generated CDR3β sequences to experimental counterparts, ensure that the predicted structures do not deviate significantly from the solved structures.  
 Use RMSD (Root Mean Square Deviation) as the structural similarity metric, and filter out predictions with an RMSD greater than 2 Å to retain only high-confidence models. (see rmsd.ipynb)
@@ -17,7 +17,7 @@ Use RMSD (Root Mean Square Deviation) as the structural similarity metric, and f
 Run alphafold_env.yaml (based on Alphafold and TCRDock requirements), tensorflow-cpu had a tendency to silently upgrade and cause dependancy conflicts so ensure that you are running 2.12.0.   
 After activating, run  
 `python download_blast.py`  
-^ found in TCRdock dir in this repo, ensure you clone because I modified some of the scripts to handle nonsense controls/negative samples  
+^ found in TCRdock dir in this repo, ensure you clone because I modified some of the scripts to handle nonsense controls/negative samples downstream. 
 Pengfei should have access to my /scratch/ggrama/download directory with the correct alphafold docker files used in predict.sh, if not, follow step 1-3 in [alphafold/docker](https://github.com/google-deepmind/alphafold/blob/main/README.md). 
 
 ## Rosetta Applications
