@@ -6,17 +6,18 @@ dependencies:
   - python=3.10
   - pip
   - biopython==1.79
-  - numpy==1.23.5  # Compatible with jaxlib 0.4.14
+  - numpy==1.23.5
   - pandas==2.0.3
   - scipy==1.11.1
+  - matplotlib==3.10.3
   - chex==0.1.7
   - dm-haiku==0.0.10
   - dm-tree==0.1.8
-  - docker-py==5.0.0
   - immutabledict==2.0.0
-  - ml-collections==0.1.0
   - setuptools<72.0.0
   - pip:
+      - docker==5.0.0
+      - ml-collections==0.1.0
       - jax==0.4.14
       - jaxlib==0.4.14+cuda12.cudnn89 @ https://storage.googleapis.com/jax-releases/cuda12/jaxlib-0.4.14+cuda12.cudnn89-cp310-cp310-manylinux2014_x86_64.whl
       - tensorflow-cpu==2.12.0 # had a tendency to silently upgrade and cause dependancy conflicts, make sure you are running 2.12.0
