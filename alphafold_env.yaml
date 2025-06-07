@@ -19,5 +19,5 @@ dependencies:
       - docker==5.0.0
       - ml-collections==0.1.0
       - jax==0.4.14
-      - jaxlib==0.4.14+cuda12.cudnn89 @ https://storage.googleapis.com/jax-releases/cuda12/jaxlib-0.4.14+cuda12.cudnn89-cp310-cp310-manylinux2014_x86_64.whl
-      - tensorflow-cpu==2.12.0 # had a tendency to silently upgrade and cause dependancy conflicts, make sure you are running 2.12.0
+      - jaxlib @ https://storage.googleapis.com/jax-releases/cuda12/jaxlib-0.4.14+cuda12.cudnn89-cp310-cp310-manylinux2014_x86_64.whl
+      - tensorflow-cpu==2.12.0      - tensorflow-cpu==2.12.0 # had a tendency to silently upgrade and cause dependancy conflicts, make sure you are running 2.12.0
