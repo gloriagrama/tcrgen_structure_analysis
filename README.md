@@ -4,10 +4,8 @@ Pipeline for modeling and evaluating T-cell receptor (TCR) CDR3β loop structure
 ## Compile experimentally solved structures
 Access TCR3d Database for pMHC–TCR complex structures associated with your epitope(s).  
 From each PDB entry, extract:
-
-    Peptide
-
-    CDR3α and CDR3β (available under the “structures” dropdown: alpha and beta fields)
+- Peptide
+- CDR3α and CDR3β (available under the “structures” dropdown: alpha and beta fields)
 
 Run [ANARCI](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/sabpred/anarci/) (with --ig_seqtype TCR) on α and β chains to determine V and J gene usage.
 
@@ -29,10 +27,8 @@ Pengfei should have access to my /scratch/ggrama/download directory with the cor
 ## Rosetta Applications
 Rosetta Relax and Interface Analyzer can be downloaded [here](https://rosettacommons.org/software/download/) as a non-commerical user (version 3.14). 
 Required binaries:
-
-    relax.linuxgccrelease
-
-    InterfaceAnalyzer.linuxgccrelease
+`relax.linuxgccrelease`
+`InterfaceAnalyzer.linuxgccrelease`
 
 ## Generated sequences
 After determining replicable IDs, follow workflow in rmsd.ipynb  
