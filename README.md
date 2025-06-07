@@ -11,8 +11,10 @@ Write all solved structure information to a compiled metadata file containing th
 ### Determine Accuracy of TCRDock Predictions
 
 Before aligning generated CDR3β sequences to experimental counterparts, ensure that the predicted structures do not deviate significantly from the solved structures.  
-Use RMSD (Root Mean Square Deviation) as the structural similarity metric, and filter out predictions with an RMSD greater than 2 Å to retain only high-confidence models. (see workflow.ipynb)
+Use RMSD (Root Mean Square Deviation) as the structural similarity metric, and filter out predictions with an RMSD greater than 2 Å to retain only high-confidence models. (see rmsd.ipynb)
 
 ## Alphafold env
 Run alphafold_env.yaml (based on Alphafold and TCRDock requirements), tensorflow-cpu had a tendency to silently upgrade and cause dependancy conflicts so ensure that you are running 2.12.0. 
+Ensure you run
+`python download_blast.py`
 Pengfei should have access to my /scratch/ggrama/download dir with the correct alphafold docker files used in predict.sh, if not, follow step 1-3 in [alphafold/docker](https://github.com/google-deepmind/alphafold/blob/main/README.md). 
