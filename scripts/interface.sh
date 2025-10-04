@@ -9,8 +9,6 @@
 #SBATCH --partition=general
 #SBATCH --qos=public
 #SBATCH --time=0:10:00
-#SBATCH --mail-type=START,FAIL,END
-#SBATCH --mail-user="ggrama@asu.edu"
 #SBATCH --export=NONE
 
 # === Rosetta env ===
@@ -43,7 +41,7 @@ if [[ -f "$SCORE_OUT" ]]; then
 fi
 
 # === Run InterfaceAnalyzer ===
-echo "⏳ Running InterfaceAnalyzer on $BASE"
+echo "Running InterfaceAnalyzer on $BASE"
 "$ROSETTA_BIN/InterfaceAnalyzer.linuxgccrelease" \
     -s "$PDB" \
     -interface A_B \
