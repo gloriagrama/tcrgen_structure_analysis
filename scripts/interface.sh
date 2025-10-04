@@ -38,7 +38,7 @@ LOG_OUT="${LOGS_DIR}/${BASE}.log"
 
 # === Skip if already scored ===
 if [[ -f "$SCORE_OUT" ]]; then
-    echo "✅ Already scored: $BASE"
+    echo "Already scored: $BASE"
     exit 0
 fi
 
